@@ -10,15 +10,30 @@
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
     <link rel="alternate" type="application/atom+xml" title="Atom" href="/atom.xml" />
+    <!-- GitHub Pages SPA fallback (decode redirect from /404.html) -->
+    <script type="text/javascript">
+      ;(function (l) {
+        if (l.search && l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, decoded + l.hash)
+        }
+      })(window.location)
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "takachanman",
-        "url": "https://example.com/",
+        "url": "https://takachanman.jp/",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://example.com/?q={search_term_string}",
+          "target": "https://takachanman.jp/?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }

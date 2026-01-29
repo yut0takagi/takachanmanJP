@@ -1,10 +1,12 @@
+import type { Article } from '../types/article'
+
 // ここに実際の記事URLを追加してください
 // 各プラットフォームのURLは以下の形式です：
 // Zenn: https://zenn.dev/username/articles/article-slug
 // Qiita: https://qiita.com/username/items/item-id
 // Note: https://note.com/username/n/note-id
 
-export const articles = [
+export const articles: Article[] = [
   {
     title: '生成AIで学生生活はどう変わったか',
     url: 'https://qiita.com/0yasumi_m0de/items/09f24e2a3d21a592e28b',
