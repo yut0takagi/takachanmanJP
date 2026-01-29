@@ -6,12 +6,12 @@
     <title>Redirecting…</title>
     <!--
       SPA fallback for GitHub Pages.
-      User/Org Pages = segmentCount 0 (root).
+      Project Pages = segmentCount 1 (/<repo>/...).
       Based on https://github.com/rafgraph/spa-github-pages
     -->
     <script type="text/javascript">
       ;(function () {
-        var segmentCount = 0
+        var segmentCount = 1
         var l = window.location
         var path = l.pathname.split('/').slice(0, 1 + segmentCount).join('/')
         l.replace(
