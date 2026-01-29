@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export function CookieBanner() {
   const [visible, setVisible] = useState(false)
@@ -17,12 +18,12 @@ export function CookieBanner() {
           本サイトでは利便性向上と解析のために Cookie を使用します。詳細は Cookies ページをご覧ください。
         </p>
         <div className="flex items-center gap-3">
-          <a
-            href="/cookies"
+          <Link
+            to="/cookies"
             className="rounded-md border border-white/10 px-3 py-1.5 text-white hover:bg-white/10"
           >
             詳細を見る
-          </a>
+          </Link>
           <button
             className="rounded-md bg-blue-600 px-3 py-1.5 font-semibold text-white hover:bg-blue-700"
             onClick={() => {

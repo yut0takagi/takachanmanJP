@@ -1,4 +1,4 @@
-import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { quickLinks, socialLinks } from '../../data/siteLinks'
 import { CookieBanner } from '../CookieBanner'
@@ -51,12 +51,12 @@ export function AppLayout() {
             >
               Home
             </NavLink>
-            <a
-              href="/#articles"
+            <Link
+              to={{ pathname: '/', hash: '#articles' }}
               className={`${linkBase} ${linkInactive}`}
             >
               記事
-            </a>
+            </Link>
             <NavLink
               to="/about"
               className={({ isActive }) =>
@@ -85,9 +85,9 @@ export function AppLayout() {
               <h3 className="mb-3 text-sm font-semibold text-zinc-300">Quick Links</h3>
               <nav className="grid grid-cols-2 gap-2 text-sm text-zinc-400">
                 {quickLinks.map((l) => (
-                  <a key={l.label} href={l.href} className="transition-colors hover:text-white">
+                  <Link key={l.label} to={l.href} className="transition-colors hover:text-white">
                     {l.label}
-                  </a>
+                  </Link>
                 ))}
               </nav>
             </div>

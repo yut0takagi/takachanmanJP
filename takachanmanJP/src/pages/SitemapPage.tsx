@@ -4,8 +4,8 @@ export function SitemapPage() {
   const links = [
     { to: '/', label: 'Home' },
     { to: '/about', label: 'About' },
-    { to: '/#articles', label: '記事' },
-    { to: '/#contact', label: 'お問い合わせ' },
+    { to: { pathname: '/', hash: '#articles' }, label: '記事' },
+    { to: { pathname: '/', hash: '#contact' }, label: 'お問い合わせ' },
     { to: '/terms', label: '利用規約 (Terms)' },
     { to: '/privacy', label: 'プライバシー (Privacy)' },
   ]
