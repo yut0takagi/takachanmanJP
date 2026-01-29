@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>takachanmanJP Atom</title>
+  <link href="https://example.com/"/>
+  <updated>2024-01-01T00:00:00Z</updated>
+  <id>https://example.com/</id>
+  <!-- TODO: 記事データから生成する場合はビルド時に置換 -->
+  <entry>
+    <title>Welcome</title>
+    <link href="https://example.com/"/>
+    <id>https://example.com/</id>
+    <updated>2024-01-01T00:00:00Z</updated>
+    <summary>Initial feed entry</summary>
+  </entry>
+</feed>
+
