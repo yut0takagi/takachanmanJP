@@ -5,6 +5,8 @@ import { projects } from '../data/projects'
 import { ArticleCard } from '../components/ArticleCard'
 import { articles } from '../data/articles'
 import { socialLinks } from '../data/siteLinks'
+import { obsidianPlugins } from '../data/tooling'
+import { pyPackages } from '../data/packages'
 
 const skills = [
   'React',
@@ -20,9 +22,10 @@ const skills = [
 ]
 
 const stats = [
-  { num: `${projects.length}+`, label: 'Projects' },
+  { num: `${projects.length + obsidianPlugins.length}+`, label: 'Projects' },
+  { num: `${obsidianPlugins.length}`, label: 'Obsidian plugins' },
+  { num: `${pyPackages.length}`, label: 'OSS packages' },
   { num: `${articles.length}+`, label: 'Articles' },
-  { num: '10+', label: 'Tech stacks' },
 ]
 
 function SectionHead({
@@ -128,7 +131,7 @@ export function HomePage() {
           </div>
 
           {/* stats */}
-          <div className="mt-14 grid max-w-lg grid-cols-3 gap-px overflow-hidden rounded-lg border border-border bg-border">
+          <div className="mt-14 grid max-w-xl grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-4">
             {stats.map((s) => (
               <div key={s.label} className="bg-card px-5 py-4">
                 <div className="text-2xl font-bold tracking-tight text-foreground">{s.num}</div>
