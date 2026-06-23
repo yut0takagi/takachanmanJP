@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import { pyPackages } from '../data/packages'
 import { socialLinks } from '../data/siteLinks'
+import meImg from '../assets/me.jpg'
 
 const facts = [
   { label: 'Base', value: '神奈川県 川崎市' },
@@ -60,13 +61,22 @@ export function AboutPage() {
         ref={headerAnimation.ref}
         className={headerAnimation.isVisible ? 'animate-fade-in-up' : 'opacity-0'}
       >
-        <p className="ui-eyebrow mb-2">About</p>
-        <h1 className="text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">
-          髙木悠人 / Yuto Takagi
-        </h1>
-        <p className="prose-mono mt-3 text-sm text-muted-foreground">
-          Creative Developer · AI Engineer · @takachanmanJP
-        </p>
+        <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+          <img
+            src={meImg}
+            alt="髙木悠人 / Yuto Takagi"
+            className="h-24 w-24 shrink-0 rounded-2xl border border-border object-cover sm:h-28 sm:w-28"
+          />
+          <div>
+            <p className="ui-eyebrow mb-2">About</p>
+            <h1 className="text-4xl font-extrabold tracking-tight text-foreground md:text-5xl">
+              髙木悠人 / Yuto Takagi
+            </h1>
+            <p className="prose-mono mt-3 text-sm text-muted-foreground">
+              Creative Developer · AI Engineer · @takachanmanJP
+            </p>
+          </div>
+        </div>
 
         <div className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-4">
           {facts.map((f) => (

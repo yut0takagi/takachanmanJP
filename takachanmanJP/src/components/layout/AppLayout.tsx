@@ -2,6 +2,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { socialLinks } from '../../data/siteLinks'
 import { CookieBanner } from '../CookieBanner'
+import meImg from '../../assets/me.jpg'
 
 /** docs(サイドバー)型で表示するルート。これ以外は通常のマーケ型 */
 const DOCS_PREFIXES = [
@@ -55,9 +56,11 @@ const headerLinkBase =
 function Brand() {
   return (
     <NavLink to="/" className="flex items-center gap-2.5">
-      <span className="grid h-8 w-8 place-items-center rounded-lg bg-primary text-sm font-extrabold text-primary-foreground">
-        Y
-      </span>
+      <img
+        src={meImg}
+        alt="Yuto Takagi"
+        className="h-8 w-8 rounded-full border border-border object-cover"
+      />
       <span className="flex flex-col leading-none">
         <span className="text-sm font-bold tracking-tight text-foreground">Yuto Takagi</span>
         <span className="prose-mono text-[11px] text-muted-foreground">@takachanmanJP</span>

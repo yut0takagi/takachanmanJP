@@ -7,6 +7,7 @@ import { articles } from '../data/articles'
 import { socialLinks } from '../data/siteLinks'
 import { obsidianPlugins } from '../data/tooling'
 import { pyPackages } from '../data/packages'
+import meImg from '../assets/me.jpg'
 
 const skills = [
   'React',
@@ -93,8 +94,11 @@ export function HomePage() {
 
         <div
           ref={heroAnimation.ref}
-          className={heroAnimation.isVisible ? 'animate-fade-in-up' : 'opacity-0'}
+          className={`grid gap-10 lg:grid-cols-[1fr_320px] lg:items-center ${
+            heroAnimation.isVisible ? 'animate-fade-in-up' : 'opacity-0'
+          }`}
         >
+          <div>
           <span className="ui-badge mb-6">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
             Available for work
@@ -138,6 +142,16 @@ export function HomePage() {
                 <div className="mt-0.5 text-xs text-muted-foreground">{s.label}</div>
               </div>
             ))}
+          </div>
+          </div>
+
+          {/* Portrait */}
+          <div className="order-first flex justify-center lg:order-last lg:block">
+            <img
+              src={meImg}
+              alt="髙木悠人 / Yuto Takagi"
+              className="h-40 w-40 rounded-full border border-border object-cover shadow-2xl shadow-black/40 lg:h-[320px] lg:w-[320px] lg:rounded-2xl"
+            />
           </div>
         </div>
       </section>
