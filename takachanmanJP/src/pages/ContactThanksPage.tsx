@@ -2,16 +2,17 @@ import { Link } from 'react-router-dom'
 
 export function ContactThanksPage() {
   return (
-    <div className="space-y-6 text-center">
-      <h1 className="text-3xl font-bold text-white">送信ありがとうございました</h1>
-      <p className="text-sm leading-7 text-zinc-300">
+    <div className="flex min-h-[60vh] flex-col items-center justify-center space-y-6 text-center">
+      <span className="ui-eyebrow">Thank you</span>
+      <h1 className="text-3xl font-bold tracking-tight text-foreground">送信ありがとうございました</h1>
+      <p className="max-w-xl text-sm leading-7 text-muted-foreground">
         お問い合わせを受け付けました。内容を確認のうえ、折り返しご連絡いたします。
       </p>
-      <div className="flex items-center justify-center gap-3">
-        <Link to="/" className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700">
+      <div className="flex flex-wrap items-center justify-center gap-3">
+        <Link to="/" className="ui-btn ui-btn-primary">
           トップへ戻る
         </Link>
-        <Link to="/about" className="rounded-md border border-white/20 px-4 py-2 text-sm font-semibold text-white/90 hover:bg-white/10">
+        <Link to="/about" className="ui-btn ui-btn-outline">
           About を見る
         </Link>
       </div>

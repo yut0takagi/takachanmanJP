@@ -11,10 +11,11 @@ export function ProjectsPage() {
         ref={headerAnim.ref}
         className={headerAnim.isVisible ? 'animate-fade-in-up' : 'opacity-0'}
       >
-        <h1 className="mb-3 text-3xl font-bold tracking-tight text-white md:text-4xl">
+        <p className="ui-eyebrow mb-3">Projects</p>
+        <h1 className="mb-3 text-3xl font-bold tracking-tight text-foreground md:text-4xl">
           プロジェクト一覧
         </h1>
-        <p className="max-w-2xl text-zinc-400">これまでに携わった主なプロジェクト</p>
+        <p className="ui-lead max-w-2xl">これまでに携わった主なプロジェクト</p>
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -32,7 +33,11 @@ export function ProjectsPage() {
       </div>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold tracking-tight text-white">Python Packages</h2>
+        <div className="space-y-1">
+          <p className="ui-eyebrow">PyPI</p>
+          <h2 className="ui-h2">Python Packages</h2>
+          <p className="ui-lead">公開している Python パッケージ。クリックで PyPI のページに移動します。</p>
+        </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {pyPackages.map((pkg) => (
             <a
@@ -40,15 +45,15 @@ export function ProjectsPage() {
               href={pkg.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block rounded-lg border border-zinc-800 bg-zinc-900/50 p-5 transition-colors hover:border-zinc-700"
+              className="ui-card ui-card-hover group block"
             >
               <div className="mb-1 flex items-center justify-between">
-                <h3 className="text-base font-semibold text-white group-hover:text-blue-400">
+                <h3 className="prose-mono text-base font-semibold text-foreground">
                   {pkg.name}
                 </h3>
-                <span className="text-xs text-zinc-500">PyPI</span>
+                <span className="ui-badge">PyPI</span>
               </div>
-              <p className="text-sm text-zinc-400">{pkg.description}</p>
+              <p className="text-sm text-muted-foreground">{pkg.description}</p>
             </a>
           ))}
         </div>

@@ -1,17 +1,25 @@
 export function CreditsPage() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-white">クレジット / ライセンス</h1>
-      <div className="space-y-4 text-sm leading-7 text-zinc-300">
-        <p>本サイトで使用している素材やライブラリの出典です。</p>
-        <ul className="list-inside list-disc text-zinc-400">
+    <div className="space-y-10">
+      <div>
+        <p className="ui-eyebrow mb-3">Credits</p>
+        <h1 className="mb-3 text-3xl font-bold tracking-tight text-foreground">クレジット / ライセンス</h1>
+        <p className="ui-lead max-w-2xl">
+          本サイトで使用している素材やライブラリの出典です。
+        </p>
+      </div>
+
+      <section className="space-y-3">
+        <h2 className="ui-h2">出典一覧</h2>
+        <ul className="list-inside list-disc space-y-1 text-muted-foreground leading-relaxed">
           <li>アイコン: Heroicons / MIT</li>
           <li>UI: Tailwind CSS / MIT</li>
           <li>画像: Lorem Picsum（デモ用途）</li>
         </ul>
-        <p className="text-zinc-400">各ライセンスはそれぞれの公式リポジトリをご確認ください。</p>
-      </div>
+        <p className="text-muted-foreground leading-relaxed">
+          各ライセンスはそれぞれの公式リポジトリをご確認ください。
+        </p>
+      </section>
     </div>
   )
 }
-
