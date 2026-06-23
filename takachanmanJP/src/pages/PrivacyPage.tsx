@@ -1,17 +1,27 @@
 export function PrivacyPage() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold text-white">プライバシーポリシー</h1>
-      <div className="space-y-4 text-sm leading-7 text-zinc-300">
-        <p>
+    <div className="space-y-10">
+      <div>
+        <p className="ui-eyebrow mb-3">Legal</p>
+        <h1 className="mb-3 text-3xl font-bold tracking-tight text-foreground">プライバシーポリシー</h1>
+        <p className="ui-lead max-w-2xl">
           当サイトは、ユーザーの個人情報を適切に取り扱い、プライバシーの保護に努めます。
         </p>
-        <h2 className="mt-6 text-xl font-semibold text-white">取得する情報</h2>
-        <p className="text-zinc-400">アクセス解析のためにクッキー等を使用する場合があります。</p>
-        <h2 className="mt-6 text-xl font-semibold text-white">利用目的</h2>
-        <p className="text-zinc-400">サイトの改善、問い合わせ対応のために利用します。</p>
       </div>
+
+      <section className="space-y-3">
+        <h2 className="ui-h2">取得する情報</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          アクセス解析のためにクッキー等を使用する場合があります。
+        </p>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="ui-h2">利用目的</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          サイトの改善、問い合わせ対応のために利用します。
+        </p>
+      </section>
     </div>
   )
 }
-

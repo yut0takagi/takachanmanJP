@@ -17,43 +17,38 @@ export function NotFoundPage() {
   return (
     <div className="flex min-h-[70vh] flex-col items-center justify-center text-center">
       <div className="relative w-full max-w-5xl">
-        <div className="relative mb-8 overflow-hidden rounded-xl border border-zinc-800">
+        <div className="relative mb-8 overflow-hidden rounded-xl border border-border">
           <img
             ref={imgRef}
             src={picsumUrl}
             alt="Random from Picsum"
-            className="h-64 w-full object-cover opacity-80 md:h-80 lg:h-96"
+            className="h-64 w-full object-cover opacity-60 grayscale md:h-80 lg:h-96"
             referrerPolicy="no-referrer"
             onError={handleImageError}
             loading="eager"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-transparent to-transparent" />
-        </div>
-        <div className="absolute inset-0 -z-10 animate-float">
-          <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
         </div>
 
         <div className="animate-fade-in-up">
-          <h1 className="mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-9xl font-bold text-transparent">
+          <span className="ui-eyebrow">Error 404</span>
+          <h1 className="mb-4 mt-3 text-8xl font-extrabold tracking-tight text-muted-foreground/30 md:text-9xl">
             404
           </h1>
-          <h2 className="mb-4 text-3xl font-bold text-white animate-fade-in-up animation-delay-200">
+          <h2 className="mb-4 text-3xl font-bold text-foreground animate-fade-in-up animation-delay-200">
             Page Not Found
           </h2>
-          <p className="mb-8 text-zinc-400 animate-fade-in-up animation-delay-400">
+          <p className="mb-8 text-muted-foreground animate-fade-in-up animation-delay-400">
             お探しのページは見つかりませんでした。
             <br />
             URLが間違っているか、ページが移動した可能性があります。
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up animation-delay-600">
-            <Link
-              to="/"
-              className="group flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 font-semibold text-white transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50"
-            >
+          <div className="flex flex-wrap items-center justify-center gap-3 animate-fade-in-up animation-delay-600">
+            <Link to="/" className="ui-btn ui-btn-primary group">
               <svg
-                className="h-5 w-5 transition-transform group-hover:-translate-x-1"
+                className="h-4 w-4 transition-transform group-hover:-translate-x-1"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -67,10 +62,7 @@ export function NotFoundPage() {
               </svg>
               Back to Home
             </Link>
-            <Link
-              to="/about"
-              className="rounded-lg border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white backdrop-blur transition-all hover:scale-105 hover:bg-white/10"
-            >
+            <Link to="/about" className="ui-btn ui-btn-outline">
               About
             </Link>
           </div>
